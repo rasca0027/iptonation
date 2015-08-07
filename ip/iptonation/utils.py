@@ -5,9 +5,10 @@ SERVER = settings.MYSQL_SERVER
 USERNAME = settings.MYSQL_USERNAME
 PASSWORD = settings.MYSQL_PASSWORD
 DB = settings.MYSQL_DB
+PORT = settings.MYSQL_PORT
 
 def tonation(ip):
-    db = MySQLdb.connect(SERVER, USERNAME, PASSWORD, DB)
+    db = MySQLdb.connect(SERVER, PORT, USERNAME, PASSWORD, DB)
     #db = MySQLdb.connect('localhost', 'root', 'root', 'test')
     cursor = db.cursor()
 

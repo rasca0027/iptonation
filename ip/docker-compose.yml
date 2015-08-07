@@ -1,15 +1,16 @@
 api:
   image: rasca0027/ip2nation:v1
   volumes:
-    - /home/rasca/Documents/tagtoo/ip2nation/iptonation/ip:/home/ 
+    - .:/home/ 
   working_dir: /home/
   command: python manage.py runserver
-  ports: "8000:8000"
+  ports:
+    - "8000:8000"
   links:
     - mysql
 mysql:
-  image: rasca0027/mysql:v1
-  volumes:
-    - /home/rasca/Documents/tagtoo/ip2nation/:/home/
-  working_dir: /home/
-  command: /bin/bash ./mysql.sh 
+  image: mysql:5.5
+  environment: 
+    - MYSQL_ROOT_PASSWORD=root
+
+

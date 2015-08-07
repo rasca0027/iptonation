@@ -85,6 +85,7 @@ STATIC_URL = '/static/'
 
 # iptonation
 MYSQL_SERVER = 'localhost'
+MYSQL_PORT = 3306
 MYSQL_USERNAME = 'root'
 MYSQL_PASSWORD = 'root'
 MYSQL_DB = 'test'
