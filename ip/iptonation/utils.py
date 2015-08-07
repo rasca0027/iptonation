@@ -8,8 +8,7 @@ DB = settings.MYSQL_DB
 PORT = settings.MYSQL_PORT
 
 def tonation(ip):
-    db = MySQLdb.connect(SERVER, PORT, USERNAME, PASSWORD, DB)
-    #db = MySQLdb.connect('localhost', 'root', 'root', 'test')
+    db = MySQLdb.connect(host=SERVER, port=PORT, user=USERNAME, passwd=PASSWORD, db=DB)
     cursor = db.cursor()
 
     sql = "SELECT country FROM ip2nation WHERE ip < INET_ATON('" + ip + "') ORDER BY ip DESC LIMIT 0,1"
