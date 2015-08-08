@@ -20,3 +20,4 @@ with open('ip2nation.sql', 'r') as fil:
             continue
         cur.execute(command)
     conn.commit()
+    cur.close()
