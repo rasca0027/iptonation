@@ -19,4 +19,4 @@ with open('ip2nation.sql', 'r') as fil:
         if not command.strip():
             continue
         cur.execute(command)
-
+    conn.commit()
