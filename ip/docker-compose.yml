@@ -3,7 +3,7 @@ api:
   volumes:
     - .:/home/ 
   working_dir: /home/
-  command: python manage.py runserver
+  command: /usr/bin/env bash build.sh
   ports:
     - "8000:8000"
   links:
